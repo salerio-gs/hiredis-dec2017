@@ -24,33 +24,22 @@ endif
 -include ../makefile.defs
 
 # Add inputs and outputs from these tool invocations to the build variables 
-ELFSIZE += \
-libhiredis.so.size \
-
 
 # All Target
-all: libhiredis.so secondary-outputs
+all: libhiredis.so
 
 # Tool invocations
-libhiredis.so: $(OBJS) $(USER_OBJS)
+libhiredis.so: $(OBJS)  $(USER_OBJS)
 	@echo 'Building target: $@'
-	@echo 'Invoking: ARM A53 Linux archiver'
-	aarch64-linux-gnu-ar -r  "libhiredis.so" $(OBJS) $(USER_OBJS) $(LIBS)
+	@echo 'Invoking: ARM A53 Linux gcc linker'
+	aarch64-linux-gnu-gcc -shared -o "libhiredis.so" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
-	@echo ' '
-
-libhiredis.so.size: libhiredis.so
-	@echo 'Invoking: ARM A53 Linux Print Size'
-	aarch64-linux-gnu-size libhiredis.so  |tee "libhiredis.so.size"
-	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(OBJS)$(ARCHIVES)$(S_UPPER_DEPS)$(C_DEPS)$(ELFSIZE) libhiredis.so
+	-$(RM) $(EXECUTABLES)$(OBJS)$(S_UPPER_DEPS)$(C_DEPS) libhiredis.so
 	-@echo ' '
-
-secondary-outputs: $(ELFSIZE)
 
 .PHONY: all clean dependents
 .SECONDARY:

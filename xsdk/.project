@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>hiredis</name>
+	<name>libhiredis</name>
 	<comment>Created by SDK v2017.1</comment>
 	<projects>
 	</projects>
@@ -31,37 +31,43 @@
 		<link>
 			<name>hiredis/async.c</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/async.c</locationURI>
+			<locationURI>copy_PARENT/async.c</locationURI>
 		</link>
 		<link>
 			<name>hiredis/dict.c</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/dict.c</locationURI>
+			<locationURI>copy_PARENT/dict.c</locationURI>
 		</link>
 		<link>
 			<name>hiredis/hiredis.c</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/hiredis.c</locationURI>
+			<locationURI>copy_PARENT/hiredis.c</locationURI>
 		</link>
 		<link>
 			<name>hiredis/net.c</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/net.c</locationURI>
+			<locationURI>copy_PARENT/net.c</locationURI>
 		</link>
 		<link>
 			<name>hiredis/read.c</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/read.c</locationURI>
+			<locationURI>copy_PARENT/read.c</locationURI>
 		</link>
 		<link>
 			<name>hiredis/sds.c</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/sds.c</locationURI>
+			<locationURI>copy_PARENT/sds.c</locationURI>
 		</link>
 		<link>
 			<name>hiredis/test.c</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/test.c</locationURI>
+			<locationURI>copy_PARENT/test.c</locationURI>
 		</link>
 	</linkedResources>
+	<variableList>
+		<variable>
+			<name>copy_PARENT</name>
+			<value>$%7BPARENT-3-PROJECT_LOC%7D/git/hiredis</value>
+		</variable>
+	</variableList>
 </projectDescription>
